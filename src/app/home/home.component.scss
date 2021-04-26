@@ -1,0 +1,380 @@
+.home-center {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px 0;
+  margin: 8px 0 0;
+}
+
+.type {
+  display: none;
+  height: 73.7wv;
+  flex-direction: column;
+  // margin: 0 4px 0 0;
+  overflow-y: scroll;
+
+  li {
+    width: 25.6vw;
+    height: 11.47vw;
+    margin: 0 0 3px;
+    order: 10;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 24vw;
+      height: 9.87vw;
+      padding: 0 16px 0 11px;
+      border: 1px solid #e8e8e8;
+      border-radius: 3px;
+
+      i {
+        width: 6.4vw;
+        height: 6.4vw;
+      }
+
+      p {
+        font-size: 12px;
+        letter-spacing: 0px;
+        color: #b3b3b3;
+
+        &.active {
+          color: #ad8047;
+        }
+      }
+    }
+
+    &.sport {
+      order: 4;
+
+      i {
+        background: url("/nt1-mobile/assets/img/sport.svg") no-repeat center
+          center;
+
+        &.active {
+          background: url("/nt1-mobile/assets/img/sport2.svg") no-repeat center
+            center;
+        }
+      }
+    }
+
+    &.live {
+      order: 3;
+
+      i {
+        background: url("/nt1-mobile/assets/img/live.svg") no-repeat center
+          center;
+
+        &.active {
+          background: url("/nt1-mobile/assets/img/live2.svg") no-repeat center
+            center;
+        }
+      }
+    }
+
+    &.slot {
+      order: 1;
+
+      div {
+        padding: 0 9px 0 6px;
+      }
+
+      i {
+        width: 30px;
+        height: 16px;
+        background: url("/nt1-mobile/assets/img/slot.svg") no-repeat center
+          center;
+
+        &.active {
+          background: url("/nt1-mobile/assets/img/slot2.svg") no-repeat center
+            center;
+        }
+      }
+    }
+
+    &.lottery {
+      order: 5;
+
+      i {
+        background: url("/nt1-mobile/assets/img/lotto.svg") no-repeat center
+          center;
+
+        &.active {
+          background: url("/nt1-mobile/assets/img/lotto2.svg") no-repeat center
+            center;
+        }
+      }
+    }
+
+    &.board {
+      order: 6;
+
+      i {
+        background: url("/nt1-mobile/assets/img/board.svg") no-repeat center
+          center;
+
+        &.active {
+          background: url("/nt1-mobile/assets/img/board2.svg") no-repeat center
+            center;
+        }
+      }
+    }
+
+    &.fishing {
+      order: 2;
+
+      div {
+        padding: 0 9px 0 6px;
+      }
+
+      i {
+        width: 8vw;
+        height: 4.27vw;
+        background: url("/nt1-mobile/assets/img/fish.svg") no-repeat center
+          center;
+
+        &.active {
+          background: url("/nt1-mobile/assets/img/fish2.svg") no-repeat center
+            center;
+        }
+      }
+    }
+  }
+}
+
+.games {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  // width: 62.4vw;
+  width: 100vw;
+  height: 73.7vw;
+  overflow-y: scroll;
+  margin-bottom: 30px;
+
+  li {
+    position: relative;
+    width: 30vw;
+    height: 20vw;
+    margin-bottom: 7vw;
+
+    &.sport1 {
+
+      div {
+        background-position: 0 0;
+      }
+    }
+
+    &.live1 {
+      
+      div {
+        background-position: 0 25%;
+      }
+    }
+
+    &.live2 {
+      
+      div {
+        background-position: -30vw 25%;
+      }
+    }
+
+    &.live3 {
+      
+      div {
+        background-position: -60vw 25%;
+      }
+    }
+
+    &.live4 {
+      
+      div {
+        background-position: -90vw 25%;
+      }
+    }
+
+    &.live5 {
+      
+      div {
+        background-position: -120vw 25%;
+      }
+    }
+
+    &.slot1 {
+      
+      div {
+        background-position: 0 50%;
+      }
+    }
+    
+    &.slot2 {
+      
+      div {
+        background-position: -30vw 50%;
+      }
+    }
+
+    &.slot3 {
+      
+      div {
+        background-position: -60vw 50%;
+      }
+    }
+
+    &.slot4 {
+      
+      div {
+        background-position: -90vw 50%;
+      }
+    }
+
+    &.slot5 {
+      
+      div {
+        background-position: -120vw 50%;
+      }
+    }
+
+    &.slot6 {
+      
+      div {
+        background-position: -150vw 50%;
+      }
+    }
+
+    &.slot7 {
+      
+      div {
+        background-position: -180vw 50%;
+      }
+    }
+
+    &.slot8 {
+      
+      div {
+        background-position: -210vw 50%;
+      }
+    }
+
+    &.slot9 {
+      
+      div {
+        background-position: -240vw 50%;
+      }
+    }
+
+    &.slot10 {
+      
+      div {
+        background-position: -270vw 50%;
+      }
+    }
+
+    &.fish1 {
+      
+      div {
+        background-position: 0 75%;
+      }
+    }
+
+    &.fish2 {
+      
+      div {
+        background-position: -30vw 75%;
+      }
+    }
+
+    &.fish3 {
+      
+      div {
+        background-position: -60vw 75%;
+      }
+    }
+
+    &.fish4 {
+      
+      div {
+        background-position: -90vw 75%;
+      }
+    }
+
+    &.fish5 {
+      
+      div {
+        background-position: -120vw 75%;
+      }
+    }
+
+    &.lottery1 {
+      
+      div {
+        background-position: 0 100%;
+      }
+    }
+
+    &.lottery2 {
+      
+      div {
+        background-position: -30vw 100%;
+      }
+    }
+
+    &.lottery3 {
+      
+      div {
+        background-position: -60vw 100%;
+      }
+    }
+
+    div {
+      width: 100%;
+      height: 100%;
+      background: url('../../assets/img/new/mainIC.png') no-repeat;
+      background-size: 1000%;
+    }
+
+    p {
+      width: 80%;
+      height: 4vw;
+      margin: 1vw auto 0px;
+      border-radius: 5px;
+      position: relative;
+      text-align: center;
+      color: #996c33;
+      font-size: 3.3vw;
+      
+      span {
+        color: #d4a15f;
+        padding-right: 3px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  /* For mobile phones: */
+
+  .type {
+    li {
+      div {
+        i {
+          outline: 1px solid pink;
+          display: none;
+        }
+
+        p {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (height: 812px) {
+  /* For mobile phones: */
+
+  .games {
+    height: 97.7vw;
+  }
+}

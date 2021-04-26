@@ -1,0 +1,122 @@
+<app-ad></app-ad>
+<app-announcement></app-announcement>
+<app-member-board></app-member-board>
+<div class="home-center">
+  <ul class="type flex">
+    <li
+      *ngFor="let item of types"
+      [class]="item.type"
+      class="gray-btn-frame"
+      (click)="typeChange(item.type)"
+    >
+      <div class="g-12">
+        <i [ngClass]="{ active: item.type === curType }"></i>
+        <p [ngClass]="{ active: item.type === curType }">{{ item.name }}</p>
+      </div>
+    </li>
+  </ul>
+  <ul class="games">
+    <!-- <li *ngFor="let item of showItems" class="gray-btn-frame" (click)="click(item)">
+      <app-maintain-tip [item]="item"></app-maintain-tip>
+      [class.maintain-blur]="item.maintain"
+      <div class="g-12 gray-btn-frame" [style.background-image]="'url(' + item.imageUrl + ')'"></div>
+      <p>{{ item.name }}</p>
+    </li> -->
+    <li class="sport1">
+      <div></div>
+      <p><span>AB</span>體育</p>
+    </li>
+    <li class="live1">
+      <div></div>
+      <p><span>DG</span>真人</p>
+    </li>
+    <li class="live2">
+      <div></div>
+      <p><span>OG</span>真人</p>
+    </li>
+    <li class="live3">
+      <div></div>
+      <p><span>WM</span>真人</p>
+    </li>
+    <li class="live4">
+      <div></div>
+      <p><span>SA</span>真人</p>
+    </li>
+    <li class="live5">
+      <div></div>
+      <p><span>AB</span>真人</p>
+    </li>
+    <li class="slot1">
+      <div></div>
+      <p><span>BNG</span>老虎機</p>
+    </li>
+    <li class="slot2">
+      <div></div>
+      <p><span>CG</span>老虎機</p>
+    </li>
+    <li class="slot3">
+      <div></div>
+      <p><span>iFUN</span>老虎機</p>
+    </li>
+    <li class="slot4">
+      <div></div>
+      <p><span>PS</span>老虎機</p>
+    </li>
+    <li class="slot5">
+      <div></div>
+      <p><span>GO</span>老虎機</p>
+    </li>
+    <li class="slot6">
+      <div></div>
+      <p><span>AB</span>老虎機</p>
+    </li>
+    <li class="slot7">
+      <div></div>
+      <p><span>CD</span>老虎機</p>
+    </li>
+    <li class="slot8">
+      <div></div>
+      <p><span>RTG</span>老虎機</p>
+    </li>
+    <li class="slot9">
+      <div></div>
+      <p><span>SP</span>老虎機</p>
+    </li>
+    <li class="slot10">
+      <div></div>
+      <p><span>SM</span>老虎機</p>
+    </li>
+    <li class="fish1">
+      <div></div>
+      <p><span>CG</span>捕魚機</p>
+    </li>
+    <li class="fish2">
+      <div></div>
+      <p><span>CQ9</span>捕魚機</p>
+    </li>
+    <li class="fish3">
+      <div></div>
+      <p><span>AB</span>捕魚機</p>
+    </li>
+    <li class="fish4">
+      <div></div>
+      <p><span>RTG</span>捕魚機</p>
+    </li>
+    <li class="fish5">
+      <div></div>
+      <p><span>SP</span>捕魚機</p>
+    </li>
+    <li class="lottery1">
+      <div></div>
+      <p><span>AB</span>彩球</p>
+    </li>
+    <li class="lottery2">
+      <div></div>
+      <p><span>CD</span>彩球</p>
+    </li>
+    <li class="lottery3">
+      <div></div>
+      <p><span>EF</span>彩球</p>
+    </li>
+  </ul>
+</div>

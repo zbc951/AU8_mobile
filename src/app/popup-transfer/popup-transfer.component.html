@@ -1,0 +1,93 @@
+<div class="mask">
+  <div class="dialog">
+    <div class="title">
+      <p>{{ data.pkey | uppercase }}</p>
+      <i (click)="close()"></i>
+    </div>
+    <form
+      *ngIf="!isActivityWallet; else elseForm"
+      [formGroup]="transferWalletForm"
+      appThrottle
+      (action)="transferIn()"
+    >
+      <div class="form-row">
+        <p class="item">
+          {{ "TRANSFERPOPUP.CENTER" | translate }}
+        </p>
+        <div class="item_text">${{ money }}</div>
+      </div>
+
+      <div class="amount form-row">
+        <p class="item">
+          {{ "TRANSFERPOPUP.TRANSFER-AMOUNT" | translate }}
+        </p>
+        <input
+          formControlName="amount"
+          type="number"
+          class="wallet_select"
+          min="1"
+          required
+        />
+      </div>
+      <div class="transferConfirm form-row">
+        <button
+          class="confirm_btn orange_btn"
+          [disabled]="
+            transferWalletForm.invalid ||
+            transferWalletForm.get('amount').value == 0
+          "
+        >
+          {{ "TRANSFERPOPUP.CONFIRM" | translate }}
+        </button>
+      </div>
+      <div class="platformAmount form-row">
+        <p class="item">{{ data.pkey | uppercase }}平台</p>
+        <p class="item_text">$ {{ platformMoney }}</p>
+      </div>
+    </form>
+    <ng-template #elseForm>
+      <form [formGroup]="transferWalletForm">
+        <div class="form-row">
+          <p class="item">
+            {{ "TRANSFERPOPUP.CENTER" | translate }}
+          </p>
+          <div class="item_text">${{ money }}</div>
+        </div>
+
+        <div class="form-row">
+          <p class="item">
+            {{ "TRANSFERPOPUP.SELECT-WALLET" | translate }}
+          </p>
+          <select
+            class="wallet_select"
+            name=""
+            id=""
+            formControlName="walletType"
+          >
+            <option [value]="null">
+              {{ "TRANSFERPOPUP.CENTER" | translate }}
+            </option>
+            <option
+              *ngFor="let item of getWalletType; let i = inedx"
+              [value]="item.id"
+            >
+              {{ item.name }}
+              <ng-container *ngIf="item.status === 'mounted'"
+                >-
+                <ng-container *ngIf="item.mountPlatformId !== data.pid">{{
+                  item.mountPlatformName
+                }}</ng-container>
+
+                {{ "TRANSFERPOPUP.mounted" | translate }}</ng-container
+              >
+            </option>
+          </select>
+        </div>
+      </form>
+    </ng-template>
+    <hr />
+    <button class="goGame orange_btn" (click)="enter()">
+      {{ "TRANSFERPOPUP.GOGAME" | translate }}
+    </button>
+  </div>
+</div>
